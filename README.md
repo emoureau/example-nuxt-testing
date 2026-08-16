@@ -104,4 +104,3 @@ To bypass once: `git commit --no-verify`, or `HUSKY=0 git commit`.
   most files have no import block. The exception is `server/utils/assets.ts`, which imports
   its types explicitly so a plain-node unit test can import it — see
   [Making code testable](test/README.md#making-code-testable).
-# example-nuxt-testing
