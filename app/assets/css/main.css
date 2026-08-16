@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Zodiak', serif;
+  --font-mono: 'JetBrains Mono', ui-mono;
+}
+
+:root {
+  --ui-radius: 0.5rem;
+}
+
+/* An eyebrow: the small caps label that names a region without competing with
+   it — sidebar section headings, card field labels. `text-xs` is the floor for
+   this app; the label steps back through weight, case and colour rather than by
+   shrinking, so it stays legible at the size everything else bottoms out at.
+   Positioning stays at the call site — this is the type style only. */
+@utility eyebrow {
+  @apply text-xs font-semibold uppercase tracking-widest text-dimmed;
+}
+
+/* Fallback/Standard for Firefox & modern browsers */
+* {
+  scrollbar-color: var(--ui-text-muted) var(--ui-bg);
+  scrollbar-width: thin;
+}
+
+/* WebKit override for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ui-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ui-primary);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ui-neutral);
+}

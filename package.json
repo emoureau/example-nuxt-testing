@@ -1,0 +1,58 @@
+{
+  "name": "example-nuxt-testing",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "dev:mock": "concurrently -n mock,nuxt -c cyan,green \"npm run mock\" \"nuxt dev\"",
+    "generate": "nuxt generate",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "mock": "tsx mock/server.ts",
+    "preview": "nuxt preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run --project unit",
+    "test:nuxt": "vitest run --project nuxt",
+    "test:e2e": "vitest run --project e2e",
+    "test:coverage": "vitest run --project unit --project nuxt --coverage",
+    "typecheck": "nuxt typecheck",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.10.0",
+    "nuxt": "^4.5.0",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.40",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.2.0",
+    "@iconify-json/mdi": "^1.2.3",
+    "@mswjs/http-middleware": "^0.10.3",
+    "@nuxt/test-utils": "^4.1.0",
+    "@testing-library/user-event": "^14.6.4",
+    "@testing-library/vue": "^8.1.0",
+    "@types/node": "^26.2.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vue/test-utils": "^2.4.11",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.7.0",
+    "happy-dom": "^20.11.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "msw": "^2.15.0",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.3.9"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "esbuild@0.27.2": true,
+    "esbuild@0.27.7": true,
+    "vue-demi@0.14.10": true
+  }
+}

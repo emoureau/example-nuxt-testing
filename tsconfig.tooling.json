@@ -1,0 +1,16 @@
+{
+  // Nuxt generates a tsconfig per context, and between them they cover `app/`, `server/`,
+  // `shared/` and `test/nuxt/` — but nothing else. Without this project the mock backend
+  // and the unit and e2e suites are invisible to `npm run typecheck`, which is exactly
+  // where a stale import or a mistyped fixture likes to hide.
+  "extends": "./.nuxt/tsconfig.node.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": [
+    "mock/**/*",
+    "test/unit/**/*",
+    "test/e2e/**/*"
+  ],
+  "exclude": []
+}
